@@ -8,3 +8,7 @@ Insecure Login Blocked: You can't get an access token or log in to this app from
 
 2018/05/24
 21:15
+
+2018/05/25
+1.全部完成,可以登入
+2.新增兩張Faecbook SDK 設定圖片

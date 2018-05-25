@@ -1,6 +1,10 @@
 <?php
   require_once "config.php";
 
+  if(isset($_SESSION['access_token'])) {
+    header('Location: index.php');
+    exit();
+  }
   $redirectURL = "http://localhost/FacebookLogin/fb-callback.php";
   $permissions = ['email'];
   $loginURL = $helper->getLoginUrl($redirectURL,$permissions);
@@ -15,6 +19,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
   </head>
   <body>
+
     <div class="container" style="margin-top:100px">
       <div class="row justify-content-center">
         <div class="col-md-6 col-md-offset-3" align="center">
@@ -28,5 +33,6 @@
         </div>
       </div>
     </div>
+
   </body>
 </html>
